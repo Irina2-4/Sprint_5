@@ -8,7 +8,6 @@ class TestNavigateToLinksOnTheSite:
 
     # Переход по клику в личный кабинет
     def test_log_in_to_account(self,driver):
-        driver.maximize_window()
         # Переход на главную страницу
         driver.get(URL.MAIN)
         WebDriverWait(driver, 10).until(expected_conditions.element_to_be_clickable(Main_Locators.BUTTON_ACCOUNT))
@@ -30,7 +29,6 @@ class TestNavigateToLinksOnTheSite:
 
     # Переход по клику на "Конструктор"
     def test_go_constr(self,driver):
-        driver.maximize_window()
         # Переход на главную страницу
         driver.get(URL.MAIN)
         WebDriverWait(driver, 10).until(expected_conditions.element_to_be_clickable(Main_Locators.BUTTON_ACCOUNT))
@@ -55,7 +53,6 @@ class TestNavigateToLinksOnTheSite:
 
 # Переход на логотип Stellar Burger
     def test_go_stellar_burger(self,driver):
-        driver.maximize_window()
         # Переход на главную страницу
         driver.get(URL.MAIN)
         WebDriverWait(driver, 10).until(expected_conditions.element_to_be_clickable(Main_Locators.BUTTON_ACCOUNT))

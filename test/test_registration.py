@@ -8,8 +8,6 @@ class TestRegistration:
 
     # Успешная регистрация
     def test_button_registration(self,driver):
-
-        driver.maximize_window()
         driver.get(URL.REG)
         #Генерация рандомного адреса
         email = f'imorgunova{randint(5,500)}@yandex.ru'
@@ -35,7 +33,6 @@ class TestRegistration:
 
     def test_password_incorrect(self, driver):
 
-        driver.maximize_window()
         driver.get(URL.MAIN)
         WebDriverWait(driver, 10).until(expected_conditions.element_to_be_clickable(Main_Locators.BUTTON_ACCOUNT))
         # Поиск кнопки Личный кабинет

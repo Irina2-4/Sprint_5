@@ -9,7 +9,6 @@ class TestNavigateSectionInConstructor:
     # Переход к разделу "Начинки"
 
     def test_go_link_fillings(self,driver):
-        driver.maximize_window()
         # Переход на главную страницу
         driver.get(URL.MAIN)
         WebDriverWait(driver, 10).until(expected_conditions.element_to_be_clickable(Main_Locators.BUTTON_ACCOUNT))
@@ -27,7 +26,6 @@ class TestNavigateSectionInConstructor:
 
     # Переход к разделу "Соусы"
     def test_go_link_sauces(self, driver):
-        driver.maximize_window()
         # Переход на главную страницу
         driver.get(URL.MAIN)
         # Ожидание, когда ссылка "Соусы" станет кликабельна
@@ -40,7 +38,6 @@ class TestNavigateSectionInConstructor:
 
     # Переход к разделу "Булки"
     def test_go_link_buns(self,driver):
-        driver.maximize_window()
 
         # Переход на главную страницу
         driver.get(URL.MAIN)

@@ -7,7 +7,6 @@ from url import URL
 class TestEnterToAccount:
     # Вход по кнопке "Войти в аккаунт"
     def test_login_with_the_correct_password(self,driver):
-        driver.maximize_window()
         driver.get(URL.MAIN)
         WebDriverWait(driver, 10).until(expected_conditions.element_to_be_clickable(Locators.BUTTON_LOGIN))
         # Поиск кнопки Войти в аккаунт
@@ -30,7 +29,6 @@ class TestEnterToAccount:
 
         # Вход по кнопке "Личный кабинет"
     def test_login_through_personal_account(self, driver):
-        driver.maximize_window()
         driver.get(URL.MAIN)
         WebDriverWait(driver, 10).until(expected_conditions.element_to_be_clickable(Main_Locators.BUTTON_ACCOUNT))
         # Поиск кнопки Войти в аккаунт
@@ -53,7 +51,6 @@ class TestEnterToAccount:
 
         # Вход через кнопку "Войти" в форме регистрации"
     def test_login_through_login_button_in_registration_form(self, driver):
-        driver.maximize_window()
         driver.get(URL.REG)
         #Ожидание ссылки "Войти"
         WebDriverWait(driver, 10).until(expected_conditions.element_to_be_clickable(Locators.ACC_BUTTON))
@@ -77,7 +74,6 @@ class TestEnterToAccount:
 
     #Вход через кнопку в форме восстановления пароля
     def test_login_through_password_recovery_form(self,driver):
-        driver.maximize_window()
         driver.get(URL.PASSWORD_RECOVERY)
         WebDriverWait(driver, 10).until(expected_conditions.element_to_be_clickable(Locators.ACC_BUTTON))
         # Поиск кнопки "Войти в аккаунт"
@@ -96,7 +92,6 @@ class TestEnterToAccount:
         assert driver.find_element(*Locators.ORDER_B)
 
     def test_log_out_of_account(self,driver):
-        driver.maximize_window()
         # Переход на главную страницу
         driver.get(URL.MAIN)
         WebDriverWait(driver, 10).until(expected_conditions.element_to_be_clickable(Locators.BUTTON_LOGIN))

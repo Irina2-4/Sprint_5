@@ -4,7 +4,7 @@ from selenium import webdriver
 def driver():
 # инициализируем драйвер браузера
     driver = webdriver.Chrome()
-
+    driver.maximize_window()
     yield driver
 # закроем браузер
-    #driver.quit()
+    driver.quit()
